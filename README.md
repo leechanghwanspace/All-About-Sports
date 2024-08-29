@@ -1,6 +1,6 @@
 # All-About-Sports
 
-_**[⚽AaS : 아스💪🏻] 지향점**_
+_**[⚽AaS : 아스💪🏻] **_
 ---
 ![image](https://github.com/user-attachments/assets/08fefdb5-639b-46df-97b5-05521f66f019)  
   
