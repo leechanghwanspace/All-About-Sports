@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AaS</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css">
+</head>
+<body>
+<div class="container">
+  <div class="section section1">
+  <div th:replace="navbar :: navbar"></div>
+    <div class="hero">
+      <h2></h2>
+      <p id="hero-text"><br>AaS,<br>"all about sports is aim for exercise together."<br> <br>
+      </p>
+    </div>
+  </div>
+
+  <div class="section section2">
+    <div class="section-content">
+      <div class="section2-text">
+        <h2>Cooperation <br>and <br>Competition</h2>
+        <p id="coop-comp-text">Cooperation and Competition,<br>
+          "the function of cooperation and competition in sports"<br>
+        </p>
+      </div>
+      <div class="section2-image">
+        <div class="image-slider">
+          <img th:src="@{/image/slideimage1.jpg}" alt="Image 1">
+          <img th:src="@{/image/slideimage2.jpg}" alt="Image 2">
+          <img th:src="@{/image/slideimage3.jpg}" alt="Image 3">
+          <img th:src="@{/image/slideimage4.jpg}" alt="Image 4">
+          <img th:src="@{/image/slideimage5.jpg}" alt="Image 5">
+          <img th:src="@{/image/slideimage6.jpg}" alt="Image 6">
+          <img th:src="@{/image/slideimage7.jpg}" alt="Image 7">
+        </div>
+
+        <div class="circles">
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+        </div>
+        <button class="prev-button">&#10094;</button>
+        <button class="next-button">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section3">
+    <h2>Popular Sport</h2>
+    <p id="section3-text">Selected the top 5 most accessible and most famous sports events for modern people.<br>
+    </p>
+    <div class="boxes-container">
+      <div class="box">  <img th:src="@{/image/soccer.jpg}" alt="soccer"></div>
+      <div class="box">  <img th:src="@{/image/golf.jpg}" alt="golf"></div>
+      <div class="box">  <img th:src="@{/image/workout.jpg}" alt="workout"></div>
+      <div class="box">  <img th:src="@{/image/pilates.jpg}" alt="pilates"></div>
+      <div class="box">  <img th:src="@{/image/diet.jpg}" alt="diet"></div>
+    </div>
+    <div class="additional-text" style="display: none;"></div>
+  </div>
+
+  <div class="section section4">
+    <h2>Are you curious about the features of the AaS?</h2>
+    <p id="coop-comp-button">Press the WATCH MORE button.<br>
+    </p>
+    <div class="buttonhero">
+      <button id="watch-more">WATCH MORE</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      Copyright © 2024 All about Sports. All Rights Reserved. Designed & Developed by
+      <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+    </p>
+  </footer>
+</div>
+<script th:src="@{/js/index.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+</body>
+</html>

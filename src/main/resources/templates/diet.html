@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet</title>
+  <link rel="stylesheet" th:href="@{/css/dietstyle.css}">
+</head>
+<body>
+<div class="container">
+  <div th:replace="navbar :: navbar"></div>
+  <div class="categories">
+    <a th:id="dietrunningcrew" th:href="@{/crew/diet_running}" class="category-box"
+       onmouseover="changeCategory('dietrunningcrew', '런닝 모임')"
+       onmouseout="resetCategory('dietrunningcrew', 'RUNNING CREW')">
+      <span>RUNNING <br>CREW</span>
+    </a>
+    <a th:id="diethikingcrew" th:href="@{/crew/diet_hiking}" class="category-box"
+       onmouseover="changeCategory('diethikingcrew', '등산 모임')"
+       onmouseout="resetCategory('diethikingcrew', 'HIKING CREW')">
+      <span>HIKING <br>CREW</span>
+    </a>
+    <a th:id="dietclimbingcrew" th:href="@{/crew/diet_climbing}" class="category-box"
+       onmouseover="changeCategory('dietclimbingcrew', '클라이밍 모임')"
+       onmouseout="resetCategory('dietclimbingcrew', 'CLIMBING CREW')">
+      <span>CLIMBING <br>CREW</span>
+    </a>
+    <a th:id="community" th:href="@{/posts}" class="category-box"
+       onmouseover="changeCategory('community', '커뮤니티')"
+       onmouseout="resetCategory('community', 'COMMUNITY')">
+      <span>COMMUNITY</span>
+    </a>
+  </div>
+  <footer class="footer">
+    <p>
+      Copyright © 2024 All about Sports. All Rights Reserved. Designed & Developed by
+      <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+    </p>
+  </footer>
+</div>
+<script th:src="@{/js/diet.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+</body>
+</html>

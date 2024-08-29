@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf</title>
+  <link rel="stylesheet" th:href="@{/css/golfstyle.css}">
+</head>
+<body>
+<div class="container">
+  <div th:replace="navbar :: navbar"></div>
+  <div class="categories">
+    <a th:id="golfcc" th:href="@{/golf_cc}" class="category-box"
+       onmouseover="changeCategory('golfcc', '골프 CC')"
+       onmouseout="resetCategory('golfcc', 'GOLF CC')">
+      <span>GOLF <br>CC</span>
+    </a>
+    <a th:id="golfcenter" th:href="@{/golf_center}" class="category-box"
+       onmouseover="changeCategory('golfcenter', '골프 센터')"
+       onmouseout="resetCategory('golfcenter', 'GOLF CENTER')">
+      <span>GOLF <br>CENTER</span>
+    </a>
+    <a th:id="golfmatching" th:href="@{/matching/golf}" class="category-box"
+       onmouseover="changeCategory('golfmatching', '골프 매칭')"
+       onmouseout="resetCategory('golfmatching', 'GOLF MATCHING')">
+      <span>GOLF <br>MATCHING</span>
+    </a>
+    <a th:id="community" th:href="@{/posts}" class="category-box"
+       onmouseover="changeCategory('community', '커뮤니티')"
+       onmouseout="resetCategory('community', 'COMMUNITY')">
+      <span>COMMUNITY</span>
+    </a>
+  </div>
+  <div class="footer">
+    <p>
+      Copyright © 2024 All about Sports. All Rights Reserved. Designed & Developed by
+      <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+    </p>
+  </div>
+</div>
+<script th:src="@{/js/golf.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer</title>
+  <link rel="stylesheet" th:href="@{/css/soccerstyle.css}">
+</head>
+<body>
+<div class="container">
+  <div th:replace="navbar :: navbar"></div>
+  <div class="categories">
+    <a id="soccerfield" th:href="@{/soccer_field}" class="category-box"
+       onmouseover="changeCategory('soccerfield', '축구 구장')"
+       onmouseout="resetCategory('soccerfield', 'SOCCER FIELD')">
+      <span>SOCCER <br>FIELD</span>
+    </a>
+    <a id="soccermatching" th:href="@{/matching/soccer}" class="category-box"
+       onmouseover="changeCategory('soccermatching', '축구 매칭')"
+       onmouseout="resetCategory('soccermatching', 'SOCCER MATCHING')">
+      <span>SOCCER <br>MATCHING</span>
+    </a>
+    <a id="soccercrew" th:href="@{/crew/soccer}" class="category-box"
+       onmouseover="changeCategory('soccercrew', '축구 크루')"
+       onmouseout="resetCategory('soccercrew', 'SOCCER CREW')">
+      <span>SOCCER <br>CREW</span>
+    </a>
+    <a id="community" th:href="@{/posts}" class="category-box"
+       onmouseover="changeCategory('community', '커뮤니티')"
+       onmouseout="resetCategory('community', 'COMMUNITY')">
+      <span>COMMUNITY</span>
+    </a>
+  </div>
+  <footer class="footer">
+    <p>
+      Copyright © 2024 All about Sports. All Rights Reserved. Designed & Developed by
+      <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+    </p>
+  </footer>
+</div>
+<script th:src="@{/js/soccer.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+</body>
+</html>

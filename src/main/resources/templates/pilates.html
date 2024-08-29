@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilates</title>
+  <link rel="stylesheet" th:href="@{/css/pilatesstyle.css}">
+</head>
+<body>
+<div class="container">
+  <div th:replace="navbar :: navbar"></div>
+  <div class="categories">
+    <a id="pilatescenter" th:href="@{/pilates_center}" class="category-box"
+       onmouseover="changeCategory('pilatescenter', '필라테스 센터')"
+       onmouseout="resetCategory('pilatescenter', 'PILATES CENTER')">
+      <span>PILATES <br>CENTER</span>
+    </a>
+    <a id="community" th:href="@{/posts}" class="category-box"
+       onmouseover="changeCategory('community', '커뮤니티')"
+       onmouseout="resetCategory('community', 'COMMUNITY')">
+      <span>COMMUNITY</span>
+    </a>
+  </div>
+  <footer class="footer">
+    <p>
+      Copyright © 2024 All about Sports. All Rights Reserved. Designed & Developed by
+      <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+    </p>
+  </footer>
+</div>
+<script th:src="@{/js/pilates.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+</body>
+</html>

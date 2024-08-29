@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category</title>
+  <link rel="stylesheet" th:href="@{/css/categorystyle.css}">
+</head>
+<body>
+<div class="container">
+  <div th:replace="navbar :: navbar"></div>
+  <div class="categories">
+    <a th:id="soccer" th:href="@{/soccer}" class="category-box"
+       onmouseover="changeCategory('soccer', '축구')"
+       onmouseout="resetCategory('soccer', 'SOCCER')">
+      <span>SOCCER</span>
+    </a>
+    <a th:id="golf" th:href="@{/golf}" class="category-box"
+       onmouseover="changeCategory('golf', '골프')"
+       onmouseout="resetCategory('golf', 'GOLF')">
+      <span>GOLF</span>
+    </a>
+    <a th:id="workout" th:href="@{/workout}" class="category-box"
+       onmouseover="changeCategory('workout', '헬스')"
+       onmouseout="resetCategory('workout', 'WORKOUT')">
+      <span>WORKOUT</span>
+    </a>
+    <a th:id="pilates" th:href="@{/pilates}" class="category-box"
+       onmouseover="changeCategory('pilates', '필라테스')"
+       onmouseout="resetCategory('pilates', 'PILATES')">
+      <span>PILATES</span>
+    </a>
+    <a th:id="diet" th:href="@{/diet}" class="category-box"
+       onmouseover="changeCategory('diet', '다이어트')"
+       onmouseout="resetCategory('diet', 'DIET')">
+      <span>DIET</span>
+    </a>
+  </div>
+  <footer class="footer">
+    <p>
+      Copyright © 2024 All about Sports. All Rights Reserved. Designed & Developed by
+      <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+    </p>
+  </footer>
+</div>
+<script th:src="@{/js/category.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+</body>
+</html>

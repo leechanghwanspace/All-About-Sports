@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div th:fragment="navbar">
+    <div class="header">
+        <h1><a th:href="@{/}">AaS</a></h1>
+        <div class="nav">
+            <ul>
+                <li><a th:href="@{/}" id="home">HOME</a></li>
+                <li><a th:href="@{/category}" id="list">LIST</a></li>
+                <li><a th:href="@{/posts}" id="board">BOARD</a></li>
+                <li sec:authorize="!isAuthenticated()"><a th:href="@{/login}" id="login">LOGIN</a></li>
+                <li sec:authorize="!isAuthenticated()"><a th:href="@{/signup}" id="signup">SIGN UP</a></li>
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/mypage}" id="mypage">MY PAGE</a></li>
+                <li sec:authorize="isAuthenticated()">
+                    <a href="#" id="logout-link" onclick="document.getElementById('logout-form').submit()">LOGOUT</a>
+                    <form id="logout-form" th:action="@{/logout}" method="post" style="display: none;"></form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/navbar.js}"></script>
+</body>
+</html>

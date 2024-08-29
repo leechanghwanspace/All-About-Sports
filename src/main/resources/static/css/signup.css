@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'abster';
+  src: url(/font/abster-webfont.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/image/login_signup.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container .header {
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header h1 a {
+    text-decoration: none;
+    color: white;
+    font-family: 'abster'; /* 'abster' 폰트 적용 */
+}
+
+.container .nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.container .nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: inherit; /* 기본 폰트 적용 */
+}
+
+.container .nav ul li a:hover {
+    color: #1fdfdf;
+}
+
+.signup-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.signup-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: inherit; /* 기본 폰트 적용 */
+}
+
+.signup-form .form-group {
+    margin-bottom: 15px;
+}
+
+.signup-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    text-align: left;
+    font-family: inherit; /* 기본 폰트 적용 */
+}
+
+.signup-form .form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit; /* 기본 폰트 적용 */
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1fdfdf;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: inherit; /* 기본 폰트 적용 */
+}
+
+.signup-form button:hover {
+    background-color: #17b3b3;
+}

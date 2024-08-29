@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Page</title>
+    <link rel="stylesheet" th:href="@{/css/mypage.css}" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div th:replace="navbar :: navbar"></div>
+    <div class="new-shape">
+        <div class="user-info">
+            <h3>MY PAGE</h3>
+            <p>USERNAME : <span th:text="${user.username}"></span></p>
+        </div>
+        <div class="left-section">
+            <form method="post" th:action="@{/updateEmail}">
+                <div class="form-group">
+                    <label for="newEmail">NEW E-MAIL :</label>
+                    <input type="email" id="newEmail" name="newEmail" th:value="${user.email}">
+                </div>
+                <button type="submit" class="update-email-button">UPDATE E-MAIL</button>
+            </form>
+            <form method="get" th:action="@{/recommended}">
+                <button type="submit" class="recommended-page-button">RECOMMENDED PAGE</button>
+            </form>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+</div>
+<script th:src="@{/js/navbar.js}"></script>
+</body>
+</html>

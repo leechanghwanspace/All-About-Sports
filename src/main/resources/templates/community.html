@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community</title>
+  <link rel="stylesheet" th:href="@{/css/community.css}">
+</head>
+<body>
+<div class="container">
+  <!-- Navbar inclusion -->
+  <div th:replace="navbar :: navbar"></div>
+
+  <div class="rectangle">
+    <div class="post-list">
+      <h2>[커뮤니티 : 자유게시판]</h2>
+
+      <!-- Post items loop -->
+      <div class="post-items" id="post-items" th:each="post : ${posts}">
+        <div class="post-item">
+          <h3><a th:href="@{/posts/{id}(id=${post.id})}" th:text="${post.title}">게시글 제목</a></h3>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination" id="pagination" th:if="${totalPages != null and totalPages > 0}">
+        <span th:each="page : ${#numbers.sequence(1, totalPages)}">
+          <a th:href="@{|/posts?page=${page}|}" th:text="${page}"></a>
+        </span>
+      </div>
+    </div>
+
+    <!-- Create post button -->
+    <button class="post-create-button" onclick="togglePostForm()">게시글 작성</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>
+    Copyright © 2024 I LIVE ALONE. All Rights Reserved. Designed & Developed by
+    <span id="author-link" style="cursor: pointer; color: white; text-decoration: underline;" onclick="openInstagram()">ChangHwan Lee</span>
+  </p>
+</footer>
+
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close" onclick="togglePostForm()">&times;</span>
+    <h2>새 게시글 작성</h2>
+    <form th:action="@{/posts}" method="post">
+      <label for="title">제목:</label>
+      <input type="text" id="title" name="title" required><br><br>
+      <label for="content">내용:</label>
+      <textarea id="content" name="content" required></textarea><br><br>
+      <label for="author">작성자:</label>
+      <input type="text" id="author" name="author" required><br><br>
+      <button type="submit">작성</button>
+    </form>
+  </div>
+</div>
+
+<!-- External JS inclusion -->
+<script th:src="@{/js/community.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+<script th:src="@{/js/navbar.js}"></script>
+</body>
+</html>

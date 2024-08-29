@@ -1,0 +1,221 @@
+@font-face {
+  font-family: 'abster';
+  src: url(/font/abster-webfont.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/image/workout.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header {
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header h1 a {
+    text-decoration: none;
+    color: white;
+    font-family: abster;
+}
+
+.container .nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.container .nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.container .nav ul li a:hover {
+    color: #1fdfdf;
+}
+
+.container .hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.container .content {
+    width: 80%;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .content h1 {
+    text-align: center;
+    color: #28a745;
+    margin-bottom: 20px;
+    font-family: 'abster';
+}
+
+.container .content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.container .content .create-post-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.container .content .create-post-form .form-group {
+    margin-bottom: 15px;
+}
+
+.container .content .create-post-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.container .content .create-post-form input[type="text"],
+.container .content .create-post-form input[type="number"],
+.container .content .create-post-form input[type="datetime-local"],
+.container .content .create-post-form input[type="text"],
+.container .content .create-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+.container .content .create-post-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+}
+
+.container .content .create-post-form button:hover {
+    background-color: #218838;
+}
+
+.container .content .post-list .post-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.container .content .post-list .post-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.container .content .post-list .post-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.container .content .post-list .post-members {
+    font-size: 14px;
+    color: #333;
+}
+
+.container .content .post-list .post-status {
+    color: red;
+    font-weight: bold;
+}
+
+.container .content .post-list form {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.container .content .post-list .join-button,
+.container .content .post-list .close-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+}
+
+.container .content .post-list .close-button {
+    background-color: #dc3545;
+}
+
+.container .content .post-list .join-button:hover,
+.container .content .post-list .close-button:hover {
+    opacity: 0.8;
+}
+
+.container .content .post-list .members-list {
+    margin-top: 15px;
+}
+
+.container .content .create-post-button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container .content .create-post-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+.container .content .create-post-button a:hover {
+    background-color: #218838;
+}

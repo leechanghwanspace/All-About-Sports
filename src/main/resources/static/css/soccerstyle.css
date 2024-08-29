@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'abster';
+  src: url(/font/abster-webfont.woff) format('woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh; /* 컨테이너의 최소 높이 설정 */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/image/soccer.jpg);
+    background-size: cover; /* 이미지가 컨테이너에 꽉 차도록 설정 */
+    background-repeat: repeat; /* 이미지가 반복되도록 설정 */
+    display: flex;
+    flex-direction: column; /* 컨테이너 안 요소들이 세로 방향으로 배치되도록 설정 */
+}
+.container .header{
+    width: 80%;
+    height: 80px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header h1 a{
+    text-decoration: none;
+    color:white;
+    font-family: abster;
+}
+
+.container .nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+
+}
+
+.container .nav ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+.container .nav ul li a:hover{
+    color:#1fdfdf;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap; /* 가로 세로 비율 유지를 위해 추가 */
+    justify-content: center; 
+    align-items: center;
+    margin-top: 100px; /* 카테고리 박스 위 여백 조정 */
+}
+
+.category-box {
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 15px;
+}
+
+.category-box:before {
+    content: "";
+    display: block;
+    padding-bottom: 175%; /* 가로세로 비율을 유지하기 위한 비율 조절 */
+}
+
+.container .hero{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%; /* 왼쪽 여백을 50%로 설정하여 가운데 정렬 */
+    transform: translateX(-50%); /* 가운데 정렬을 위해 50%만큼 좌측으로 이동 */
+    color: white;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+    font-size: 14px; /* 글자 크기를 조정 */
+    text-align: center; /* 가운데 정렬 설정 */
+    z-index: 9999; /* 다른 요소 위에 보이도록 z-index 설정 */
+}
+
+.category-box {
+    width: 200px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0);
+    border:5px solid #ffffff;
+    margin: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, background-color 0.3s, transform 0.2s; /* 변경 사항: transform 효과 추가 */
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+.category-box:hover {
+    border-color: #1fdfdf;
+    background: linear-gradient(rgba(31, 253, 223, 0.105),rgba(31,253,223,0.105));
+    transition-delay: 0.1s; /* 변경 사항: transition-delay 속성 추가 */
+    transform: scale(1.2); /* 변경 사항: 색이 들어올 때 조금 확대되는 효과 추가 */
+}
+.category-box span {
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.category-box:hover span {
+    color: #1fdfdf; /* 마우스를 올렸을 때 폰트 색 변경 */
+}
