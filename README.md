@@ -1,6 +1,6 @@
-# All-About-Sports
+# All About Sports, 올 어바웃 스포츠
 
-_**[⚽AaS : 아스💪🏻] **_
+⚽AaS : 아스💪🏻
 ---
 ![image](https://github.com/user-attachments/assets/08fefdb5-639b-46df-97b5-05521f66f019)  
   
@@ -9,7 +9,7 @@ _**[⚽AaS : 아스💪🏻] **_
 스포츠에 관심있는 남녀노소 누구든 함께 할 수 있습니다.  
 <br><br><br><br>  
 
-_**🏌🏻‍♂️프로젝트 소개🏃🏻‍♀️‍➡️**_
+_**🏌🏻‍♂프로젝트 소개🏃🏻‍♀️‍➡️**_
 ---
 이 프로젝트는 스포츠 커뮤니티 플랫폼으로 직역 그대로 스포츠의 모든 것이라는 의미를 담고 있습니다.
 _AaS_ 는 사용자들이 스포츠 크루를 생성하고 매칭 서비스를 활용하여 스포츠에 참여하며, 사용자의 위치로부터 해당 스포츠를 할 수 있는 장소를 찾아보며 날씨에 따른 실내/실외를 구분하여 추천해주는 기능을 가지고 있습니다.
@@ -21,7 +21,7 @@ _**🛠️사용기술🛠️**_
 
 <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=Thymeleaf&logoColor=white">   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">  
 <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">   <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=for-the-badge&logo=Spring Security&logoColor=white">   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white">  
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">  
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">  <img src="https://img.shields.io/badge/kakaomapAPI-FFCD00?style=for-the-badge&logo=kakao&logoColor=white">  
 <br><br><br><br>
 _**🖥️상세화면🖥️**_
 ---
